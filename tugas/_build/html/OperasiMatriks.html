@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
@@ -62,7 +62,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'OperasiMatriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Mendefinisikan fungsi operasi baris eleminasi Gauss" href="SistemLinier.html" />
+    <link rel="next" title="Menggambar Persamaan Bidang Dalam Ruang 3D" href="SistemLinier.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,9 +180,8 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Aljabar Matriks</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="SistemLinier.html">Menggambar Persamaan Bidang Dalam Ruang 3D</a></li>
 
-
-<li class="toctree-l1"><a class="reference internal" href="SistemLinier.html">Mendefinisikan fungsi operasi baris eleminasi Gauss</a></li>
 </ul>
 
     </div>
@@ -378,38 +377,16 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Aljabar Matriks</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks"><strong>1.Matriks</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-matriks"><strong>2.Jenis-jenis Matriks</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks-penjumlahan-pengurangan-perkalian-dan-transpose"><strong>3.Operasi Matriks (Penjumlahan, Pengurangan, Perkalian, dan Transpose)</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-dan-pengurangan"><strong>1. Penjumlahan dan Pengurangan:</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks"><strong>2. Perkalian Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tranpose"><strong>3.Tranpose</strong></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-sendiri-adalah-proses-mengalikan-setiap-elemen-baris-pada-matriks-pertama-dengan-elemen-kolom-pada-matriks-kedua-hasilnya-kemudian-dijumlahkan-untuk-memperoleh-hasil-akhir-perkalian-matriks-contoh-perkalian-pada-matriks-dengan-ordo-2x2-ab-begin-bmatrix-1-2-3-4-end-bmatrix-begin-bmatrix-5-6-7-8-end-bmatrix">Perkalian matriks sendiri adalah proses mengalikan setiap elemen baris pada matriks pertama dengan elemen kolom pada matriks kedua. Hasilnya kemudian dijumlahkan untuk memperoleh hasil akhir perkalian matriks. Contoh perkalian pada Matriks dengan ordo 2x2:
-$$
-AB =
-\begin{bmatrix}
-1 &amp; 2\
-3 &amp; 4\
-\end{bmatrix}
-.
-\begin{bmatrix}
-5&amp;6\
-7&amp;8
-\end{bmatrix}\</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-bmatrix-1-5-2-7-1-6-2-8-3-5-4-7-3-6-4-8-end-bmatrix">\begin{bmatrix}
-1(5)+2(7) &amp; 1(6)+2(8)\
-3(5)+4(7) &amp; 3(6)+4(8)
-\end{bmatrix}\</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranpose"><strong>3.Tranpose</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berikut-adalah-salah-satu-program-untuk-mengalikan-matriks"><strong>Berikut adalah salah satu Program untuk mengalikan Matriks :</strong></a></li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -439,54 +416,64 @@ a3 &amp; a4\\
 <p>Matriks juga memiliki beberapa jenis, seperti:</p>
 <ol class="arabic simple">
 <li><p><strong>Matriks Nol</strong><br />
-Matriks Nol adalah matriks yang elemen penyusunnya adalah nol, contoh:
-$<span class="math notranslate nohighlight">\(
+Matriks Nol adalah matriks yang elemen penyusunnya adalah nol, contoh:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 0&amp;0\\
 0&amp;0\\
 \end{bmatrix}
-\)</span>$</p></li>
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
 <li><p><strong>Matriks Baris</strong>/
-Matriks Baris adlah matriks yang elemennya terdiri hanya satu baris, contohnya:
-$<span class="math notranslate nohighlight">\(
+Matriks Baris adlah matriks yang elemennya terdiri hanya satu baris, contohnya:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
 \begin{bmatrix}
 5&amp;2&amp;4
 \end{bmatrix}
-\)</span>$</p></li>
+\]</div>
+<ol class="arabic simple" start="3">
 <li><p><strong>Matriks Kolom</strong><br />
-Matriks kolom adlah matriks yang elemennya terdiri hanya satu kolom, contohnya:
-$<span class="math notranslate nohighlight">\(
+Matriks kolom adlah matriks yang elemennya terdiri hanya satu kolom, contohnya:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
 2\\
 3\\
 \end{bmatrix}
-\)</span>$</p></li>
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
 <li><p><strong>Matriks Tranpose</strong><br />
-Matriks transpose merupakan matriks yang diperoleh dari memindahkan elemen-elemen baris menjadi elemen pada kolom atau sebaliknya. contoh:
-$$
+Matriks transpose merupakan matriks yang diperoleh dari memindahkan elemen-elemen baris menjadi elemen pada kolom atau sebaliknya. contoh:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A 3x2 =
 \begin{bmatrix}
-1 &amp; 2\
-3 &amp; 4\
-5 &amp; 6\
-\end{bmatrix}</p></li>
-</ol>
-<blockquote>
-<div></div></blockquote>
-<p>At =
-\begin{bmatrix}
-1 &amp; 3 &amp; 5\
-2 &amp; 4 &amp; 6\
+1 &amp; 2\\
+3 &amp; 4\\
+5 &amp; 6\\
 \end{bmatrix}
-$$</p>
+&gt;&gt;
+At =
+\begin{bmatrix}
+1 &amp; 3 &amp; 5\\
+2 &amp; 4 &amp; 6\\
+\end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="operasi-matriks-penjumlahan-pengurangan-perkalian-dan-transpose">
 <h2><strong>3.Operasi Matriks (Penjumlahan, Pengurangan, Perkalian, dan Transpose)</strong><a class="headerlink" href="#operasi-matriks-penjumlahan-pengurangan-perkalian-dan-transpose" title="Link to this heading">#</a></h2>
 <section id="penjumlahan-dan-pengurangan">
 <h3><strong>1. Penjumlahan dan Pengurangan:</strong><a class="headerlink" href="#penjumlahan-dan-pengurangan" title="Link to this heading">#</a></h3>
 <p>Operasi matriks yang pertama kita bahas adalah penjumlahan matriks. Operasi matriks adalah penjumlahan 2 matriks yang letak komponennya sama. Penjumlahan matriks tidak ada bedanya dengan penjumlahan pada umumnya tetapi harus memenuhi syarat yaitu jumlah ordo yang sama</p>
-<p>Contoh Penjumlahan matriks:
-$<span class="math notranslate nohighlight">\(
+<p>Contoh Penjumlahan matriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A + B =
 \begin{bmatrix}
 a1 &amp; a2\\
@@ -502,56 +489,55 @@ C =
 a1+b1 &amp; a2+b2\\
 a3+b3 &amp; a4+b4\\
 \end{bmatrix}
-\)</span>$
-Pengurangan matriks juga sama halnya dengan contoh matriks diatas hanya saja operasinya adalah pengurangan</p>
+\end{split}\]</div>
+<p>Pengurangan matriks juga sama halnya dengan contoh matriks diatas hanya saja operasinya adalah pengurangan</p>
 </section>
 <section id="perkalian-matriks">
 <h3><strong>2. Perkalian Matriks</strong><a class="headerlink" href="#perkalian-matriks" title="Link to this heading">#</a></h3>
-</section>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="perkalian-matriks-sendiri-adalah-proses-mengalikan-setiap-elemen-baris-pada-matriks-pertama-dengan-elemen-kolom-pada-matriks-kedua-hasilnya-kemudian-dijumlahkan-untuk-memperoleh-hasil-akhir-perkalian-matriks-contoh-perkalian-pada-matriks-dengan-ordo-2x2-ab-begin-bmatrix-1-2-3-4-end-bmatrix-begin-bmatrix-5-6-7-8-end-bmatrix">
-<h1>Perkalian matriks sendiri adalah proses mengalikan setiap elemen baris pada matriks pertama dengan elemen kolom pada matriks kedua. Hasilnya kemudian dijumlahkan untuk memperoleh hasil akhir perkalian matriks. Contoh perkalian pada Matriks dengan ordo 2x2:
-$$
+<p>Perkalian matriks sendiri adalah proses mengalikan setiap elemen baris pada matriks pertama dengan elemen kolom pada matriks kedua. Hasilnya kemudian dijumlahkan untuk memperoleh hasil akhir perkalian matriks. Contoh perkalian pada Matriks dengan ordo 2x2:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 AB =
 \begin{bmatrix}
-1 &amp; 2\
-3 &amp; 4\
+1 &amp; 2\\
+3 &amp; 4\\
 \end{bmatrix}
 .
 \begin{bmatrix}
-5&amp;6\
+5&amp;6\\
 7&amp;8
-\end{bmatrix}\<a class="headerlink" href="#perkalian-matriks-sendiri-adalah-proses-mengalikan-setiap-elemen-baris-pada-matriks-pertama-dengan-elemen-kolom-pada-matriks-kedua-hasilnya-kemudian-dijumlahkan-untuk-memperoleh-hasil-akhir-perkalian-matriks-contoh-perkalian-pada-matriks-dengan-ordo-2x2-ab-begin-bmatrix-1-2-3-4-end-bmatrix-begin-bmatrix-5-6-7-8-end-bmatrix" title="Link to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="begin-bmatrix-1-5-2-7-1-6-2-8-3-5-4-7-3-6-4-8-end-bmatrix">
-<h1>\begin{bmatrix}
-1(5)+2(7) &amp; 1(6)+2(8)\
+\end{bmatrix}\\
+=
+\begin{bmatrix}
+1(5)+2(7) &amp; 1(6)+2(8)\\
 3(5)+4(7) &amp; 3(6)+4(8)
-\end{bmatrix}\<a class="headerlink" href="#begin-bmatrix-1-5-2-7-1-6-2-8-3-5-4-7-3-6-4-8-end-bmatrix" title="Link to this heading">#</a></h1>
-<p>\begin{bmatrix}
-19 &amp; 22\
+\end{bmatrix}\\
+=
+\begin{bmatrix}
+19 &amp; 22\\
 50 &amp; 43
 \end{bmatrix}
-$$</p>
+\end{split}\]</div>
+</section>
 <section id="tranpose">
-<h2><strong>3.Tranpose</strong><a class="headerlink" href="#tranpose" title="Link to this heading">#</a></h2>
-<p>Seperti pada <strong>No. 4</strong> pada <strong>Jenis-jenis Matriks</strong>, Matriks transpose merupakan matriks yang diperoleh dari memindahkan elemen-elemen baris menjadi elemen pada kolom atau sebaliknya.Dengan contoh yang sama:
-$$
+<h3><strong>3.Tranpose</strong><a class="headerlink" href="#tranpose" title="Link to this heading">#</a></h3>
+<p>Seperti pada <strong>No. 4</strong> pada <strong>Jenis-jenis Matriks</strong>, Matriks transpose merupakan matriks yang diperoleh dari memindahkan elemen-elemen baris menjadi elemen pada kolom atau sebaliknya.Dengan contoh yang sama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A 3x2 =
 \begin{bmatrix}
-1 &amp; 2\
-3 &amp; 4\
-5 &amp; 6\
-\end{bmatrix}</p>
-<blockquote>
-<div></div></blockquote>
-<p>At =
-\begin{bmatrix}
-1 &amp; 3 &amp; 5\
-2 &amp; 4 &amp; 6\
+1 &amp; 2\\
+3 &amp; 4\\
+5 &amp; 6\\
 \end{bmatrix}
-$$</p>
+&gt;&gt;
+At =
+\begin{bmatrix}
+1 &amp; 3 &amp; 5\\
+2 &amp; 4 &amp; 6\\
+\end{bmatrix}
+\end{split}\]</div>
+</section>
 </section>
 <section id="berikut-adalah-salah-satu-program-untuk-mengalikan-matriks">
 <h2><strong>Berikut adalah salah satu Program untuk mengalikan Matriks :</strong><a class="headerlink" href="#berikut-adalah-salah-satu-program-untuk-mengalikan-matriks" title="Link to this heading">#</a></h2>
@@ -648,7 +634,7 @@ $$</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Mendefinisikan fungsi operasi baris eleminasi Gauss</p>
+        <p class="prev-next-title">Menggambar Persamaan Bidang Dalam Ruang 3D</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -668,38 +654,16 @@ $$</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Aljabar Matriks</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks"><strong>1.Matriks</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-matriks"><strong>2.Jenis-jenis Matriks</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-matriks-penjumlahan-pengurangan-perkalian-dan-transpose"><strong>3.Operasi Matriks (Penjumlahan, Pengurangan, Perkalian, dan Transpose)</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-dan-pengurangan"><strong>1. Penjumlahan dan Pengurangan:</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks"><strong>2. Perkalian Matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tranpose"><strong>3.Tranpose</strong></a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks-sendiri-adalah-proses-mengalikan-setiap-elemen-baris-pada-matriks-pertama-dengan-elemen-kolom-pada-matriks-kedua-hasilnya-kemudian-dijumlahkan-untuk-memperoleh-hasil-akhir-perkalian-matriks-contoh-perkalian-pada-matriks-dengan-ordo-2x2-ab-begin-bmatrix-1-2-3-4-end-bmatrix-begin-bmatrix-5-6-7-8-end-bmatrix">Perkalian matriks sendiri adalah proses mengalikan setiap elemen baris pada matriks pertama dengan elemen kolom pada matriks kedua. Hasilnya kemudian dijumlahkan untuk memperoleh hasil akhir perkalian matriks. Contoh perkalian pada Matriks dengan ordo 2x2:
-$$
-AB =
-\begin{bmatrix}
-1 &amp; 2\
-3 &amp; 4\
-\end{bmatrix}
-.
-\begin{bmatrix}
-5&amp;6\
-7&amp;8
-\end{bmatrix}\</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#begin-bmatrix-1-5-2-7-1-6-2-8-3-5-4-7-3-6-4-8-end-bmatrix">\begin{bmatrix}
-1(5)+2(7) &amp; 1(6)+2(8)\
-3(5)+4(7) &amp; 3(6)+4(8)
-\end{bmatrix}\</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tranpose"><strong>3.Tranpose</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#berikut-adalah-salah-satu-program-untuk-mengalikan-matriks"><strong>Berikut adalah salah satu Program untuk mengalikan Matriks :</strong></a></li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
