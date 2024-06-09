@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Welcome to My Jupyter Book &#8212; My sample book</title>
+    <title>Aplikasi KAL &#8212; My sample book</title>
   
   
   
@@ -57,10 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'AplikasiKAL';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Aljabar Matriks" href="OperasiMatriks.html" />
+    <link rel="prev" title="Determinan Matriks" href="DeterminanMatriks.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -122,8 +124,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -140,7 +140,7 @@
 
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -171,8 +171,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to My Jupyter Book
                 </a>
             </li>
@@ -251,7 +251,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FAplikasiKAL.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +281,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/AplikasiKAL.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +291,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -352,7 +352,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -363,11 +365,22 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Welcome to My Jupyter Book</h1>
+    <h1>Aplikasi KAL</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#page-rank"><strong>Page Rank</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep"><strong>Konsep</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma"><strong>Algoritma</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implentasi"><strong>Implentasi</strong></a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -377,19 +390,238 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-my-jupyter-book">
-<h1>Welcome to My Jupyter Book<a class="headerlink" href="#welcome-to-my-jupyter-book" title="Link to this heading">#</a></h1>
-<p>Nama : Adib Wildan Riyadi
-NIM  : 230411100179</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="OperasiMatriks.html"><strong>Aljabar Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="SistemLinier.html"><strong>Sistem Linier</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="MatriksInvers.html"><strong>Matriks Invers</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="DeterminanMatriks.html"><strong>Determinan Matriks</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="AplikasiKAL.html"><strong>Aplikasi KAL</strong></a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="aplikasi-kal">
+<h1><strong>Aplikasi KAL</strong><a class="headerlink" href="#aplikasi-kal" title="Link to this heading">#</a></h1>
+<section id="page-rank">
+<h2><strong>Page Rank</strong><a class="headerlink" href="#page-rank" title="Link to this heading">#</a></h2>
+<p>PageRank (PR) adalah algoritma pencarian yang digunakan oleh Google Search untuk memberi peringkat halaman web, dalam mengukur seberapa pentingnya bagi pengguna di hasil mesin pencarian mereka</p>
+<p>Menurut Google:</p>
+<p>PageRank bekerja dengan menghitung jumlah dan kualitas tautan ke suatu halaman untuk menentukan perkiraan kasar seberapa penting situs web tersebut. Asumsi yang mendasarinya adalah bahwa situs web yang lebih penting cenderung menerima lebih banyak tautan dari situs web lainnya.</p>
+</section>
+<section id="konsep">
+<h2><strong>Konsep</strong><a class="headerlink" href="#konsep" title="Link to this heading">#</a></h2>
+<p>PageRank, memiliki konsep dasar yang sama dengan link popularity, tetapi tidak hanya memperhitungkan “jumlah” inbound dan outbound link. Pendekatan yang digunakan adalah sebuah halaman akan diangap penting jika halaman lain memiliki link ke halaman tersebut. Sebuah halaman juga akan menjadi semakin penting jika halaman lain yang memiliki rangking (pagerank) tinggi mengacu ke halaman tersebut.</p>
+<p>Dengan pendekatan yang digunakan PageRank, proses terjadi secara rekursif dimana sebuah rangking akan ditentukan oleh rangking dari halaman web yang rangkingnya ditentukan oleh rangking halaman web lain yang memiliki link ke halaman tersebut. Proses ini berarti suatu proses yang berulang (rekursif). Di dunia maya, ada jutaan bahkan milyaran halaman web. Oleh karena itu sebuah rangking halaman web ditentukan dari struktur link dari keseluruhan halaman web yang ada di dunia maya. Sebuah proses yang sangat besar dan komplek.</p>
+</section>
+<section id="algoritma">
+<h2><strong>Algoritma</strong><a class="headerlink" href="#algoritma" title="Link to this heading">#</a></h2>
+<p>Dari pendekatan yang sudah dijelaskan pada artikel konsep pagerank, Lawrence Page and Sergey Brin membuat algoritma pagerank seperti di bawah:</p>
+<p>Algoritma awal</p>
+<div class="math notranslate nohighlight">
+\[
+PR(A) = (1-d) + d \left( \frac{PR(T1)}{C(T1)} + \cdots + \frac{PR(Tn)}{C(Tn)} \right)
+\]</div>
+<p>Salah satu algoritma lain yang dipublikasikan</p>
+<div class="math notranslate nohighlight">
+\[
+PR(A) = \frac{(1-d)}{N} + d \left( \frac{PR(T1)}{C(T1)} + \cdots + \frac{PR(Tn)}{C(Tn)} \right)
+\]</div>
+<p><strong>PR(A)</strong> adalah Pagerank halaman A</p>
+<p><strong>PR(T1)</strong> adalah Pagerank halaman T1 yang mengacu ke halaman A</p>
+<p><strong>C(T1)</strong> adalah jumlah link keluar (outbound link) pada halaman T1</p>
+<p><strong>d</strong> adalah damping factor yang bisa diberi antara 0 dan 1.</p>
+<p><strong>N</strong> adalah jumlah keseluruhan halaman web (yang terindeks oleh Google)</p>
+<p>Dari algoritma di atas dapat dilihat bahwa pagerank ditentukan untuk setiap halaman anda bukan keseluruhan situs web. Pagerank sebuah halaman ditentukan dari pagerank halaman yang mengacu kepadanya yang juga menjalani proses penentuan pagerank dengan cara yang sama, jadi proses ini akan berulang sampai ditemukan hasil yang tepat.</p>
+<p>Akan tetapi pagerank halaman A tidak langsung diberikan kepada halaman yang dituju, akan tetapi sebelumnya dibagi dengan jumlah link yang ada pada halaman T1 (outbound link), dan pagerank itu akan dibagi rata kepada setiap link yang ada pada halaman tersebut. Demikian juga dengan setiap halaman lain “Tn” yang mengacu ke halaman “A”.</p>
+<p>Setelah semua pagerank yang didapat dari halaman-halaman lain yang mengacu ke halaman “A” dijumlahkan, nilai itu kemudian dikalikan dengan damping factor yang bernilai antara 0 sampai 1. Hal ini dilakukan agar tidak keseluruhan nilai pagerank halaman T didistribusikan ke halaman A.</p>
+</section>
+<section id="implentasi">
+<h2><strong>Implentasi</strong><a class="headerlink" href="#implentasi" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+0 &amp; 0 &amp; 1 &amp; 1/2\\
+1/3 &amp; 0 &amp; 0 &amp; 0\\
+1/3 &amp; 1/2 &amp; 0 &amp; 1/2\\
+1/3 &amp; 1/2 &amp; 0 &amp; 0\\
+\end{bmatrix}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mf">0.25</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.25</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.25</span><span class="p">],</span>
+    <span class="p">[</span><span class="mf">0.25</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">toleransi</span> <span class="o">=</span> <span class="mf">1e-6</span>
+
+<span class="n">beda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+<span class="n">iteration</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">beda</span> <span class="o">&gt;</span> <span class="n">toleransi</span><span class="p">:</span>
+    <span class="n">V_baru</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">V</span><span class="p">)</span>
+    <span class="n">beda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">V_baru</span> <span class="o">-</span> <span class="n">V</span><span class="p">)</span>
+    <span class="n">V</span> <span class="o">=</span> <span class="n">V_baru</span>
+    <span class="n">iteration</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;V </span><span class="si">{</span><span class="n">iteration</span><span class="si">}</span><span class="s2">:&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">V</span><span class="si">}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil akhir:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V 1:
+[[0.375     ]
+ [0.08333333]
+ [0.33333333]
+ [0.20833333]]
+
+V 2:
+[[0.4375    ]
+ [0.125     ]
+ [0.27083333]
+ [0.16666667]]
+
+V 3:
+[[0.35416667]
+ [0.14583333]
+ [0.29166667]
+ [0.20833333]]
+
+V 4:
+[[0.39583333]
+ [0.11805556]
+ [0.29513889]
+ [0.19097222]]
+
+V 5:
+[[0.390625  ]
+ [0.13194444]
+ [0.28645833]
+ [0.19097222]]
+
+V 6:
+[[0.38194444]
+ [0.13020833]
+ [0.29166667]
+ [0.19618056]]
+
+V 7:
+[[0.38975694]
+ [0.12731481]
+ [0.29050926]
+ [0.19241898]]
+
+V 8:
+[[0.38671875]
+ [0.12991898]
+ [0.28978588]
+ [0.19357639]]
+
+V 9:
+[[0.38657407]
+ [0.12890625]
+ [0.29065394]
+ [0.19386574]]
+
+V 10:
+[[0.38758681]
+ [0.12885802]
+ [0.29024402]
+ [0.19331115]]
+
+V 11:
+[[0.38689959]
+ [0.1291956 ]
+ [0.29028019]
+ [0.19362461]]
+
+V 12:
+[[0.3870925 ]
+ [0.12896653]
+ [0.29037664]
+ [0.19356433]]
+
+V 13:
+[[0.38715881]
+ [0.12903083]
+ [0.29029626]
+ [0.1935141 ]]
+
+V 14:
+[[0.38705331]
+ [0.12905294]
+ [0.2903254 ]
+ [0.19356835]]
+
+V 15:
+[[0.38710958]
+ [0.12901777]
+ [0.29032841]
+ [0.19354424]]
+
+V 16:
+[[0.38710053]
+ [0.12903653]
+ [0.29031753]
+ [0.19354541]]
+
+V 17:
+[[0.38709024]
+ [0.12903351]
+ [0.29032448]
+ [0.19355177]]
+
+V 18:
+[[0.38710037]
+ [0.12903008]
+ [0.29032272]
+ [0.19354683]]
+
+V 19:
+[[0.38709614]
+ [0.12903346]
+ [0.29032191]
+ [0.19354849]]
+
+V 20:
+[[0.38709616]
+ [0.12903205]
+ [0.29032302]
+ [0.19354877]]
+
+V 21:
+[[0.38709741]
+ [0.12903205]
+ [0.29032246]
+ [0.19354808]]
+
+V 22:
+[[0.3870965 ]
+ [0.12903247]
+ [0.29032253]
+ [0.1935485 ]]
+
+V 23:
+[[0.38709678]
+ [0.12903217]
+ [0.29032265]
+ [0.1935484 ]]
+
+Hasil akhir:
+[[0.38709678]
+ [0.12903217]
+ [0.29032265]
+ [0.1935484 ]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -422,14 +654,14 @@ NIM  : 230411100179</p>
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="OperasiMatriks.html"
-       title="next page">
+    <a class="left-prev"
+       href="DeterminanMatriks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Aljabar Matriks</strong></p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Determinan Matriks</strong></p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -438,7 +670,23 @@ NIM  : 230411100179</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#page-rank"><strong>Page Rank</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep"><strong>Konsep</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma"><strong>Algoritma</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implentasi"><strong>Implentasi</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

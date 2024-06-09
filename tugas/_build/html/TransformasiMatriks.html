@@ -405,62 +405,70 @@ document.write(`
 <section id="transformasi-identitas">
 <h3><strong>1. Transformasi Identitas</strong><a class="headerlink" href="#transformasi-identitas" title="Link to this heading">#</a></h3>
 <p>Transformasi identitas adalah transformasi yang tidak mengubah vektor. Matriks identitas biasanya dinotasikan dengan I.</p>
-<p>Rumus:
-$<span class="math notranslate nohighlight">\(
+<p>Rumus:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ I = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} ]
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 <section id="transformasi-skala-scaling">
 <h3><strong>2. Transformasi Skala (Scaling)</strong><a class="headerlink" href="#transformasi-skala-scaling" title="Link to this heading">#</a></h3>
 <p>Transformasi skala memperbesar atau memperkecil vektor dengan faktor tertentu.</p>
-<p>Rumus:
-$<span class="math notranslate nohighlight">\(
+<p>Rumus:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ S = \begin{pmatrix} s_x &amp; 0 \\ 0 &amp; s_y \end{pmatrix} ]
-\)</span>$
-Di mana (s_x) dan (s_y) adalah faktor skala sepanjang sumbu-x dan sumbu-y.</p>
+\end{split}\]</div>
+<p>Di mana (s_x) dan (s_y) adalah faktor skala sepanjang sumbu-x dan sumbu-y.</p>
 </section>
 <section id="transformasi-rotasi-rotation">
 <h3><strong>3. Transformasi Rotasi (Rotation)</strong><a class="headerlink" href="#transformasi-rotasi-rotation" title="Link to this heading">#</a></h3>
 <p>Transformasi rotasi memutar vektor sebesar sudut tertentu terhadap titik asal.</p>
-<p>Rumus:
-$<span class="math notranslate nohighlight">\(
+<p>Rumus:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ R(\theta) = \begin{pmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{pmatrix} ]
-\)</span>$
-Di mana (\theta) adalah sudut rotasi.</p>
+\end{split}\]</div>
+<p>Di mana (\theta) adalah sudut rotasi.</p>
 </section>
 <section id="transformasi-translasi-translation">
 <h3><strong>4. Transformasi Translasi (Translation)</strong><a class="headerlink" href="#transformasi-translasi-translation" title="Link to this heading">#</a></h3>
 <p>Translasi menggeser vektor dari satu posisi ke posisi lain. Translasi biasanya tidak bisa direpresentasikan dengan matriks 2x2 biasa, tetapi bisa dengan menggunakan matriks homogen.</p>
-<p>Rumus (Menggunakan Matriks Homogen 3x3):
-$<span class="math notranslate nohighlight">\(
+<p>Rumus (Menggunakan Matriks Homogen 3x3):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ T = \begin{pmatrix} 1 &amp; 0 &amp; t_x \\ 0 &amp; 1 &amp; t_y \\ 0 &amp; 0 &amp; 1 \end{pmatrix} ]
-\)</span>$</p>
+\end{split}\]</div>
 <p>Di mana (t_x) dan (t_y) adalah jarak translasi sepanjang sumbu-x dan sumbu-y.</p>
 </section>
 <section id="transformasi-refleksi-reflection">
 <h3><strong>5. Transformasi Refleksi (Reflection)</strong><a class="headerlink" href="#transformasi-refleksi-reflection" title="Link to this heading">#</a></h3>
 <p>Refleksi mencerminkan vektor terhadap sumbu tertentu.</p>
-<p>Rumus (Refleksi terhadap sumbu-x):
-$<span class="math notranslate nohighlight">\(
+<p>Rumus (Refleksi terhadap sumbu-x):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ F_x = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix} ]
-\)</span>$</p>
-<p>Rumus (Refleksi terhadap sumbu-y):
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Rumus (Refleksi terhadap sumbu-y):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ F_y = \begin{pmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix} ]
-\)</span>$</p>
+\end{split}\]</div>
 </section>
 <section id="transformasi-geser-shear">
 <h3><strong>6. Transformasi Geser (Shear)</strong><a class="headerlink" href="#transformasi-geser-shear" title="Link to this heading">#</a></h3>
 <p>Transformasi geser mengubah bentuk vektor dengan menggesernya sepanjang sumbu-x atau sumbu-y.</p>
-<p>Rumus (Shear horizontal):
-$<span class="math notranslate nohighlight">\(
+<p>Rumus (Shear horizontal):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ Sh_x = \begin{pmatrix} 1 &amp; k_x \\ 0 &amp; 1 \end{pmatrix} ]
-\)</span>$</p>
-<p>Rumus (Shear vertikal):
-$<span class="math notranslate nohighlight">\(
+\end{split}\]</div>
+<p>Rumus (Shear vertikal):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 [ Sh_y = \begin{pmatrix} 1 &amp; 0 \\ k_y &amp; 1 \end{pmatrix} ]
-\)</span>$
-Di mana (k_x) dan (k_y) adalah faktor geser horizontal dan vertikal.</p>
+\end{split}\]</div>
+<p>Di mana (k_x) dan (k_y) adalah faktor geser horizontal dan vertikal.</p>
 </section>
 <section id="contoh-implementasi-di-python-numpy">
 <h3><strong>Contoh Implementasi di Python (NumPy)</strong><a class="headerlink" href="#contoh-implementasi-di-python-numpy" title="Link to this heading">#</a></h3>
